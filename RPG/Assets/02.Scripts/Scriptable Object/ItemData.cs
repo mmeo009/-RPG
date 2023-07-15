@@ -23,13 +23,14 @@ public class ItemData : ScriptableObject
     public int ItemWeight { get { return itemWeight; } }
     //아이템 무게
     [SerializeField]
-    private int addPoint;
-    public int AddPoint { get { return addPoint; } }
-    //버프량
+    private int itemType;
+    public int ItemType { get { return itemType; } }
     [SerializeField]
-    private int decreasePoint;
-    public int DecreasePoint { get { return decreasePoint; } }
-    //디버프량
-
-
+    private int numberOfItemsEffects;
+    public int NumberOfItemsEffects { get { return numberOfItemsEffects; } }
+    //아이템 효과들의 개수
+    [SerializeField]
+    private int[] itemEffects;
+    public int[] ItemEffects { get { return itemEffects; } }
+    //아이템 효과
 }
