@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebee6e28f172c3f4d86e2fd53e7de3c9, type: 3}
-  m_Name: Item Data
+  m_Name: Star
   m_EditorClassIdentifier: 
   itemNumber: 1
   itemName: "\uBCC4"
   itemImage: {fileID: 21300000, guid: 1cac154f9e70ced44ace0c33d561ffff, type: 3}
   itemWeight: 5
   itemType: 1
-  numberOfItemsEffects: 1
-  itemEffects: 02000000feffffff
+  itemInfo: "\uADF8\uC9C0\uAC19\uC740 \uBCC4"
+  itemStats:
+  - dataType: 0
+    amount: 0
