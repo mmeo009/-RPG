@@ -9,17 +9,28 @@ public class ItemInfo : MonoBehaviour
     private int itemType;
     [SerializeField]
     private ItemData item;
-    public ItemData Item
+    private GameObject infomation;
+    private void Awake()
     {
-        get { return item; }
-        set
+        itemImage = GetComponent<Image>();
+        infomation = GameObject.Find("ToolTip");
+    }
+    private void Start()
+    {
+        if (item != null)
         {
-            item = value;
-            if(item != null)
-            {
-                itemImage.sprite = item.itemImage;
-                itemImage.color = new Color(1, 1, 1, 1);
-            }
+            itemImage.sprite = item.itemImage;
+            itemImage.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            Debug.Log("cant access ScriptableObject");
+        }
+    }
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(2))
+        {
         }
     }
 }

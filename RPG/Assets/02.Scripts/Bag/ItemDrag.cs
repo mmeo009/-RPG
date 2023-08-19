@@ -8,6 +8,10 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 {
     public Image image;
     [HideInInspector]public Transform parentAfterDrag;
+    public void Start()
+    {
+        image = GetComponent<Image>();
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Ω√¿€");
@@ -23,8 +27,9 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("≥°");
+        Debug.Log(parentAfterDrag.childCount);
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+
     }
 }
